@@ -1,5 +1,3 @@
-module message-broker
+module github.com/boshnyakovich/message-broker
 
 go 1.16
-
-require github.com/stretchr/testify v1.7.0

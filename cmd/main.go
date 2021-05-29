@@ -3,13 +3,15 @@ package main
 import (
 	"flag"
 	"log"
-	"message-broker/broker"
 	"net/http"
+
+	"github.com/boshnyakovich/message-broker/internal/broker"
+	"github.com/boshnyakovich/message-broker/internal/server"
 )
 
 func main() {
 	broker := broker.NewBroker()
-	handler := NewHandler(broker)
+	handler := server.NewHandler(broker)
 
 	http.HandleFunc("/", handler.Handle)
 

@@ -2,11 +2,12 @@ package server
 
 import (
 	"context"
-	"message-broker/internal/broker"
 	"net/http"
 	"strconv"
 	"strings"
 	"time"
+
+	"github.com/boshnyakovich/message-broker/internal/broker"
 )
 
 type Handler struct {
